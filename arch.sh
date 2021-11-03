@@ -22,9 +22,8 @@ echo -e "Instalar o Grub?"
  grub=`pacman -S grub os-prober`
 
 echo "Informe a Partição de Instalação da Grub"
- read disc
-  grub_install=`grub-install $disc; grub-mkconfig -o /boot/grub/grub.cfg`
-
+  grub_install=`grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB`
+ init = `grub-mkconfig -o /boot/grub/grub.cfg`
 #SENHA
 echo -e "\n\nInisira uma nova senha ao Root:\n"
  password=`passwd`
