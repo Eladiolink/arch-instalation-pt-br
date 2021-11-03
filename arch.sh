@@ -19,7 +19,7 @@ echo -e "\nInforme um nome ao hostname:"
 
 #GRUB
 echo -e "Instalar o Grub?"
- grub=`pacman -S grub os-prober`
+ grub=`pacman -S grub os-prober efibootmgr`
 
 echo "Informe a Partição de Instalação da Grub"
   grub_install=`grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB`
