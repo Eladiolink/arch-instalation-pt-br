@@ -30,9 +30,9 @@ echo -e "\n\nInisira uma nova senha ao Root:\n"
 
 #REDE
 echo -e "\nInstalação de ferramentas de rede"
- rede=`pacman -S dhcpcd`
+ rede=`pacman -S networkmanager`
 
-if `systemctl enable dhcpcd`
+if `systemctl enable NetworkManager`
   then
      echo -e "REDE ATIVA ;)\n"
 else
